@@ -30,11 +30,14 @@ rankhospital <- function(state, outcome, num = "best") {
     else if (num == "worst"){
         nrow(my_data)
     }
-    else if(num > nrow(my_data)) {
+    else if(num > nrow(my_data) || nrow(my_dat) == 0 ) {
         return(NA)
     }
     else if (num >0) {
         num    
+    }
+    else {
+        NA
     }
     required$Hospital.Name[get]
 } 
